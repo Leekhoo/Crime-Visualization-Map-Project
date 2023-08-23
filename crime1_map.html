@@ -17,7 +17,7 @@
     <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
     <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
     
-            <style> #map_74273e58b831f9daeaee010b3ff73dfe {
+            <style> #map_4cf5b7adc96100386c882324a521f536 {
                 position : relative;
                 width : 100.0%;
                 height: 100.0%;
@@ -26,11 +26,31 @@
                 }
             </style>
         
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
 </head>
 <body>
     
     
-            <div class="folium-map" id="map_74273e58b831f9daeaee010b3ff73dfe" ></div>
+<div style="position: fixed;
+     bottom: 50px; left: 50px; width: 100px; height: 200px;
+     border:2px solid grey; z-index:9999; font-size: 5px; /* 글자 크기 조절 */
+     background-color:white;
+     padding: 5px;
+     text-align: center;
+     ">   
+     <p><i class="fa fa-circle fa-2x" style="color:red"></i> 강도</p>
+     <p><i class="fa fa-circle fa-2x" style="color:black"></i> 살인</p>
+     <p><i class="fa fa-circle fa-2x" style="color:yellow"></i> 강간</p>
+     <p><i class="fa fa-circle fa-2x" style="color:blue"></i> 성폭행</p>
+     <p><i class="fa fa-circle fa-2x" style="color:green"></i> 칼부림</p>
+     <p><i class="fa fa-circle fa-2x" style="color:purple"></i> 묻지마</p>
+     <p><i class="fa fa-circle fa-2x" style="color:orange"></i> 폭행</p>
+     <p><i class="fa fa-circle fa-2x" style="color:pink"></i> 음주운전</p>
+</div>
+    
+            <div class="folium-map" id="map_4cf5b7adc96100386c882324a521f536" ></div>
         
 </body>
 <script>
@@ -41,8 +61,8 @@
                 var bounds = null;
             
 
-            var map_74273e58b831f9daeaee010b3ff73dfe = L.map(
-                                  'map_74273e58b831f9daeaee010b3ff73dfe',
+            var map_4cf5b7adc96100386c882324a521f536 = L.map(
+                                  'map_4cf5b7adc96100386c882324a521f536',
                                   {center: [37.5666791,126.9782914],
                                   zoom: 10,
                                   maxBounds: bounds,
@@ -53,7 +73,7 @@
             
         
     
-            var tile_layer_dd89ea7806af58cd7a7544707baea464 = L.tileLayer(
+            var tile_layer_14021e785504a0d642e34e420aad8801 = L.tileLayer(
                 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
                 {
   "attribution": null,
@@ -63,995 +83,572 @@
   "noWrap": false,
   "subdomains": "abc"
 }
-                ).addTo(map_74273e58b831f9daeaee010b3ff73dfe);
+                ).addTo(map_4cf5b7adc96100386c882324a521f536);
         
     
+            var marker_cluster_9f20b23ad59c283c55860a92104856d4 = L.markerClusterGroup({
+                
+            });
+            map_4cf5b7adc96100386c882324a521f536.addLayer(marker_cluster_9f20b23ad59c283c55860a92104856d4);
+            
+    
+            var circle_marker_d2cc7721efb535d2f8cc2db58db08b39 = L.circleMarker(
+                [35.1594647,126.8515034],
+                {
+  "bubblingMouseEvents": true,
+  "color": "red",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "red",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 10,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(marker_cluster_9f20b23ad59c283c55860a92104856d4);
+            
+    
+            var popup_d25a1f7a7b5f665c9d2d8b0588d3b814 = L.popup({maxWidth: '300'});
 
-            var marker_8b786067cb505fc49bf8ad8235971571 = L.marker(
+            
+                var html_7f543a2e90b0576aabb5c5f53356dad4 = $('<div id="html_7f543a2e90b0576aabb5c5f53356dad4" style="width: 100.0%; height: 100.0%;">강도 사건 지역: 광주 사건 수: 2</div>')[0];
+                popup_d25a1f7a7b5f665c9d2d8b0588d3b814.setContent(html_7f543a2e90b0576aabb5c5f53356dad4);
+            
+
+            circle_marker_d2cc7721efb535d2f8cc2db58db08b39.bindPopup(popup_d25a1f7a7b5f665c9d2d8b0588d3b814);
+
+            
+        
+    
+            var circle_marker_508409ec2016d2b0797ee30842d16e96 = L.circleMarker(
                 [36.3497007,127.3849016],
                 {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .addTo(map_74273e58b831f9daeaee010b3ff73dfe);
+  "bubblingMouseEvents": true,
+  "color": "red",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "red",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 15,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(marker_cluster_9f20b23ad59c283c55860a92104856d4);
             
     
-
-                var icon_5a5a9783f6a3a282796947327a1476b9 = L.AwesomeMarkers.icon({
-                    icon: 'exclamation-circle',
-                    iconColor: 'white',
-                    markerColor: 'red',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_8b786067cb505fc49bf8ad8235971571.setIcon(icon_5a5a9783f6a3a282796947327a1476b9);
-            
-    
-            var popup_fc2ab304295b3a4dbc13db2f09b3ac3f = L.popup({maxWidth: '300'});
+            var popup_6561ce915f8d3626c91b6e398f855fb8 = L.popup({maxWidth: '300'});
 
             
-                var html_ac5834b0d42c836066694a4f001cc843 = $('<div id="html_ac5834b0d42c836066694a4f001cc843" style="width: 100.0%; height: 100.0%;">강도 사건 지역: 대전</div>')[0];
-                popup_fc2ab304295b3a4dbc13db2f09b3ac3f.setContent(html_ac5834b0d42c836066694a4f001cc843);
+                var html_dce98f0f84c2bc153ebef934f713efee = $('<div id="html_dce98f0f84c2bc153ebef934f713efee" style="width: 100.0%; height: 100.0%;">강도 사건 지역: 대전 사건 수: 3</div>')[0];
+                popup_6561ce915f8d3626c91b6e398f855fb8.setContent(html_dce98f0f84c2bc153ebef934f713efee);
             
 
-            marker_8b786067cb505fc49bf8ad8235971571.bindPopup(popup_fc2ab304295b3a4dbc13db2f09b3ac3f);
+            circle_marker_508409ec2016d2b0797ee30842d16e96.bindPopup(popup_6561ce915f8d3626c91b6e398f855fb8);
 
             
         
     
-
-            var marker_b6d016dbb3d0fce33a0e2085815f2f4d = L.marker(
-                [37.5666791,126.9782914],
+            var circle_marker_cb5608149c560d198643f68736b4f556 = L.circleMarker(
+                [36.3497007,127.3849016],
                 {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .addTo(map_74273e58b831f9daeaee010b3ff73dfe);
+  "bubblingMouseEvents": true,
+  "color": "orange",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "orange",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 5,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(marker_cluster_9f20b23ad59c283c55860a92104856d4);
             
     
-
-                var icon_0f60d7129063be3578b322fb6e2eee32 = L.AwesomeMarkers.icon({
-                    icon: 'exclamation-circle',
-                    iconColor: 'white',
-                    markerColor: 'red',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_b6d016dbb3d0fce33a0e2085815f2f4d.setIcon(icon_0f60d7129063be3578b322fb6e2eee32);
-            
-    
-            var popup_7143e69084cab9286793b35b36abd22a = L.popup({maxWidth: '300'});
+            var popup_3bad0601f146cb370f6f7c0a501d6562 = L.popup({maxWidth: '300'});
 
             
-                var html_f931fb28be9108a291ad690dca3d51e1 = $('<div id="html_f931fb28be9108a291ad690dca3d51e1" style="width: 100.0%; height: 100.0%;">강도 사건 지역: 서울</div>')[0];
-                popup_7143e69084cab9286793b35b36abd22a.setContent(html_f931fb28be9108a291ad690dca3d51e1);
+                var html_36733f46228f1725a854cd5ebae59281 = $('<div id="html_36733f46228f1725a854cd5ebae59281" style="width: 100.0%; height: 100.0%;">폭행 사건 지역: 대전 사건 수: 1</div>')[0];
+                popup_3bad0601f146cb370f6f7c0a501d6562.setContent(html_36733f46228f1725a854cd5ebae59281);
             
 
-            marker_b6d016dbb3d0fce33a0e2085815f2f4d.bindPopup(popup_7143e69084cab9286793b35b36abd22a);
+            circle_marker_cb5608149c560d198643f68736b4f556.bindPopup(popup_3bad0601f146cb370f6f7c0a501d6562);
 
             
         
     
-
-            var marker_c200e50c9d980375a84c92fe35ae678e = L.marker(
-                [37.5666791,126.9782914],
-                {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .addTo(map_74273e58b831f9daeaee010b3ff73dfe);
-            
-    
-
-                var icon_80ac16bae2253627387fd70adf896c46 = L.AwesomeMarkers.icon({
-                    icon: 'exclamation-circle',
-                    iconColor: 'white',
-                    markerColor: 'red',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_c200e50c9d980375a84c92fe35ae678e.setIcon(icon_80ac16bae2253627387fd70adf896c46);
-            
-    
-            var popup_0aef149b0f7637bcac58814f7dde871a = L.popup({maxWidth: '300'});
-
-            
-                var html_a6ce06c23538022061450519624113a9 = $('<div id="html_a6ce06c23538022061450519624113a9" style="width: 100.0%; height: 100.0%;">강도 사건 지역: 서울</div>')[0];
-                popup_0aef149b0f7637bcac58814f7dde871a.setContent(html_a6ce06c23538022061450519624113a9);
-            
-
-            marker_c200e50c9d980375a84c92fe35ae678e.bindPopup(popup_0aef149b0f7637bcac58814f7dde871a);
-
-            
-        
-    
-
-            var marker_397fc3d416bdb52f621729243b452d53 = L.marker(
-                [37.456,126.7052],
-                {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .addTo(map_74273e58b831f9daeaee010b3ff73dfe);
-            
-    
-
-                var icon_c2ad5740b7baadc55cd0574be197af13 = L.AwesomeMarkers.icon({
-                    icon: 'exclamation-circle',
-                    iconColor: 'white',
-                    markerColor: 'red',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_397fc3d416bdb52f621729243b452d53.setIcon(icon_c2ad5740b7baadc55cd0574be197af13);
-            
-    
-            var popup_3e5d63bb0c1c3bda1597e4c25e2e517a = L.popup({maxWidth: '300'});
-
-            
-                var html_f069580cb7835f260fce18d4f3c7dbde = $('<div id="html_f069580cb7835f260fce18d4f3c7dbde" style="width: 100.0%; height: 100.0%;">강도 사건 지역: 인천</div>')[0];
-                popup_3e5d63bb0c1c3bda1597e4c25e2e517a.setContent(html_f069580cb7835f260fce18d4f3c7dbde);
-            
-
-            marker_397fc3d416bdb52f621729243b452d53.bindPopup(popup_3e5d63bb0c1c3bda1597e4c25e2e517a);
-
-            
-        
-    
-
-            var marker_ac36d30731acc7595a0ee46b040c1b5e = L.marker(
-                [36.6593,126.6729],
-                {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .addTo(map_74273e58b831f9daeaee010b3ff73dfe);
-            
-    
-
-                var icon_8024b3fc72a08845533fd34ec197ee13 = L.AwesomeMarkers.icon({
-                    icon: 'exclamation-circle',
-                    iconColor: 'white',
-                    markerColor: 'red',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_ac36d30731acc7595a0ee46b040c1b5e.setIcon(icon_8024b3fc72a08845533fd34ec197ee13);
-            
-    
-            var popup_4bba7119b24a2cf22264c46eacbc1994 = L.popup({maxWidth: '300'});
-
-            
-                var html_dbf9055b0a956eccbfbbd294c8a460f1 = $('<div id="html_dbf9055b0a956eccbfbbd294c8a460f1" style="width: 100.0%; height: 100.0%;">강도 사건 지역: 충남</div>')[0];
-                popup_4bba7119b24a2cf22264c46eacbc1994.setContent(html_dbf9055b0a956eccbfbbd294c8a460f1);
-            
-
-            marker_ac36d30731acc7595a0ee46b040c1b5e.bindPopup(popup_4bba7119b24a2cf22264c46eacbc1994);
-
-            
-        
-    
-
-            var marker_f02dd49f271bc07754e76426f1f5ff23 = L.marker(
+            var circle_marker_c958f9b72cfeb633eb25968d109beee0 = L.circleMarker(
                 [35.1799528,129.0752365],
                 {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .addTo(map_74273e58b831f9daeaee010b3ff73dfe);
+  "bubblingMouseEvents": true,
+  "color": "purple",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "purple",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 5,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(marker_cluster_9f20b23ad59c283c55860a92104856d4);
             
     
-
-                var icon_f829c6f5fc469a0e2ed9fff666930cdf = L.AwesomeMarkers.icon({
-                    icon: 'exclamation-circle',
-                    iconColor: 'white',
-                    markerColor: 'red',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_f02dd49f271bc07754e76426f1f5ff23.setIcon(icon_f829c6f5fc469a0e2ed9fff666930cdf);
-            
-    
-            var popup_3686ffdfa5321b8f31422637f1a8cd6e = L.popup({maxWidth: '300'});
+            var popup_2b430e85a27af417ee4279213120df95 = L.popup({maxWidth: '300'});
 
             
-                var html_2c44a0f04913e3161332c4fcc26ce0b5 = $('<div id="html_2c44a0f04913e3161332c4fcc26ce0b5" style="width: 100.0%; height: 100.0%;">강도 사건 지역: 부산</div>')[0];
-                popup_3686ffdfa5321b8f31422637f1a8cd6e.setContent(html_2c44a0f04913e3161332c4fcc26ce0b5);
+                var html_56ef9631c313cd0a5da4a2528c013b37 = $('<div id="html_56ef9631c313cd0a5da4a2528c013b37" style="width: 100.0%; height: 100.0%;">묻지마 사건 지역: 부산 사건 수: 1</div>')[0];
+                popup_2b430e85a27af417ee4279213120df95.setContent(html_56ef9631c313cd0a5da4a2528c013b37);
             
 
-            marker_f02dd49f271bc07754e76426f1f5ff23.bindPopup(popup_3686ffdfa5321b8f31422637f1a8cd6e);
-
-            
-        
-    
-
-            var marker_9c27c6340364c616b0f494ee75a1554c = L.marker(
-                [37.5666791,126.9782914],
-                {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .addTo(map_74273e58b831f9daeaee010b3ff73dfe);
-            
-    
-
-                var icon_d833e222a3acfef53e6e86084dea1a3a = L.AwesomeMarkers.icon({
-                    icon: 'exclamation-circle',
-                    iconColor: 'white',
-                    markerColor: 'red',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_9c27c6340364c616b0f494ee75a1554c.setIcon(icon_d833e222a3acfef53e6e86084dea1a3a);
-            
-    
-            var popup_209988a7200bb91bea8db850182764fc = L.popup({maxWidth: '300'});
-
-            
-                var html_aca81f9ada675ef6ba5077fdb4ab852f = $('<div id="html_aca81f9ada675ef6ba5077fdb4ab852f" style="width: 100.0%; height: 100.0%;">강도 사건 지역: 서울</div>')[0];
-                popup_209988a7200bb91bea8db850182764fc.setContent(html_aca81f9ada675ef6ba5077fdb4ab852f);
-            
-
-            marker_9c27c6340364c616b0f494ee75a1554c.bindPopup(popup_209988a7200bb91bea8db850182764fc);
+            circle_marker_c958f9b72cfeb633eb25968d109beee0.bindPopup(popup_2b430e85a27af417ee4279213120df95);
 
             
         
     
-
-            var marker_b0760159249fa7ab8c1f8ee3e3cdb46c = L.marker(
-                [37.5666791,126.9782914],
+            var circle_marker_6d762c8ded31a2034f2d3b0bae149873 = L.circleMarker(
+                [35.1799528,129.0752365],
                 {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .addTo(map_74273e58b831f9daeaee010b3ff73dfe);
+  "bubblingMouseEvents": true,
+  "color": "pink",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "pink",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 40,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(marker_cluster_9f20b23ad59c283c55860a92104856d4);
             
     
-
-                var icon_3b84ce17189094e956ea494eeb3ee6af = L.AwesomeMarkers.icon({
-                    icon: 'skull-crossbones',
-                    iconColor: 'white',
-                    markerColor: 'black',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_b0760159249fa7ab8c1f8ee3e3cdb46c.setIcon(icon_3b84ce17189094e956ea494eeb3ee6af);
-            
-    
-            var popup_2cef8677926b69f63f842727fcf5fb70 = L.popup({maxWidth: '300'});
+            var popup_6908fc899ed080597618c5bcea6cbdfb = L.popup({maxWidth: '300'});
 
             
-                var html_bada39518bc38af8e8104d94dddd7c29 = $('<div id="html_bada39518bc38af8e8104d94dddd7c29" style="width: 100.0%; height: 100.0%;">살인 사건 지역: 서울</div>')[0];
-                popup_2cef8677926b69f63f842727fcf5fb70.setContent(html_bada39518bc38af8e8104d94dddd7c29);
+                var html_933837ce95f66ddcef1221c74cb6ccee = $('<div id="html_933837ce95f66ddcef1221c74cb6ccee" style="width: 100.0%; height: 100.0%;">음주운전 사건 지역: 부산 사건 수: 8</div>')[0];
+                popup_6908fc899ed080597618c5bcea6cbdfb.setContent(html_933837ce95f66ddcef1221c74cb6ccee);
             
 
-            marker_b0760159249fa7ab8c1f8ee3e3cdb46c.bindPopup(popup_2cef8677926b69f63f842727fcf5fb70);
+            circle_marker_6d762c8ded31a2034f2d3b0bae149873.bindPopup(popup_6908fc899ed080597618c5bcea6cbdfb);
 
             
         
     
-
-            var marker_da49adb59b5ec3e86c0cbe99682d5e18 = L.marker(
-                [37.5666791,126.9782914],
+            var circle_marker_566db29d0280562a84287018b23f28bd = L.circleMarker(
+                [35.1799528,129.0752365],
                 {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .addTo(map_74273e58b831f9daeaee010b3ff73dfe);
+  "bubblingMouseEvents": true,
+  "color": "orange",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "orange",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 5,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(marker_cluster_9f20b23ad59c283c55860a92104856d4);
             
     
-
-                var icon_15d175b93cbd4e77f62dfc100fdab0bf = L.AwesomeMarkers.icon({
-                    icon: 'skull-crossbones',
-                    iconColor: 'white',
-                    markerColor: 'black',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_da49adb59b5ec3e86c0cbe99682d5e18.setIcon(icon_15d175b93cbd4e77f62dfc100fdab0bf);
-            
-    
-            var popup_333c93b0eb6b4b4d6a01ca9b386b041a = L.popup({maxWidth: '300'});
+            var popup_8d016387c652db0c56ca5f5f4826a083 = L.popup({maxWidth: '300'});
 
             
-                var html_9bf7c5451ce94cec5d76a3296eb5d84f = $('<div id="html_9bf7c5451ce94cec5d76a3296eb5d84f" style="width: 100.0%; height: 100.0%;">살인 사건 지역: 서울</div>')[0];
-                popup_333c93b0eb6b4b4d6a01ca9b386b041a.setContent(html_9bf7c5451ce94cec5d76a3296eb5d84f);
+                var html_25fd1c5b9b6a83771096f129c4d087e7 = $('<div id="html_25fd1c5b9b6a83771096f129c4d087e7" style="width: 100.0%; height: 100.0%;">폭행 사건 지역: 부산 사건 수: 1</div>')[0];
+                popup_8d016387c652db0c56ca5f5f4826a083.setContent(html_25fd1c5b9b6a83771096f129c4d087e7);
             
 
-            marker_da49adb59b5ec3e86c0cbe99682d5e18.bindPopup(popup_333c93b0eb6b4b4d6a01ca9b386b041a);
+            circle_marker_566db29d0280562a84287018b23f28bd.bindPopup(popup_8d016387c652db0c56ca5f5f4826a083);
 
             
         
     
-
-            var marker_c218419fe0f9a2ee4b3c9e4f140d2fde = L.marker(
+            var circle_marker_3cd098cf715277a87b6f9d33362b7611 = L.circleMarker(
                 [37.5666791,126.9782914],
                 {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .addTo(map_74273e58b831f9daeaee010b3ff73dfe);
+  "bubblingMouseEvents": true,
+  "color": "red",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "red",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 5,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(marker_cluster_9f20b23ad59c283c55860a92104856d4);
             
     
-
-                var icon_504fc156cd4db1ad3f8092777d8b8c7f = L.AwesomeMarkers.icon({
-                    icon: 'skull-crossbones',
-                    iconColor: 'white',
-                    markerColor: 'black',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_c218419fe0f9a2ee4b3c9e4f140d2fde.setIcon(icon_504fc156cd4db1ad3f8092777d8b8c7f);
-            
-    
-            var popup_96b52217fd710d00b8fe953ccd98fbf8 = L.popup({maxWidth: '300'});
+            var popup_167f9c1d50458bec66797fc16fcebd9f = L.popup({maxWidth: '300'});
 
             
-                var html_05fe0f3b53fb58a4427e3f64ae5ecd5e = $('<div id="html_05fe0f3b53fb58a4427e3f64ae5ecd5e" style="width: 100.0%; height: 100.0%;">살인 사건 지역: 서울</div>')[0];
-                popup_96b52217fd710d00b8fe953ccd98fbf8.setContent(html_05fe0f3b53fb58a4427e3f64ae5ecd5e);
+                var html_2b88e3a2c367ac8ff3c1ed32a14f2fd8 = $('<div id="html_2b88e3a2c367ac8ff3c1ed32a14f2fd8" style="width: 100.0%; height: 100.0%;">강도 사건 지역: 서울 사건 수: 1</div>')[0];
+                popup_167f9c1d50458bec66797fc16fcebd9f.setContent(html_2b88e3a2c367ac8ff3c1ed32a14f2fd8);
             
 
-            marker_c218419fe0f9a2ee4b3c9e4f140d2fde.bindPopup(popup_96b52217fd710d00b8fe953ccd98fbf8);
+            circle_marker_3cd098cf715277a87b6f9d33362b7611.bindPopup(popup_167f9c1d50458bec66797fc16fcebd9f);
 
             
         
     
-
-            var marker_5167d31e1e5b09dd97715549e3a4bc8c = L.marker(
+            var circle_marker_5f8a20da0b22573b9e14b89325f48a47 = L.circleMarker(
                 [37.5666791,126.9782914],
                 {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .addTo(map_74273e58b831f9daeaee010b3ff73dfe);
+  "bubblingMouseEvents": true,
+  "color": "purple",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "purple",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 75,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(marker_cluster_9f20b23ad59c283c55860a92104856d4);
             
     
-
-                var icon_8dbbff77a48f5b0f758086e0dbdb7f3b = L.AwesomeMarkers.icon({
-                    icon: 'skull-crossbones',
-                    iconColor: 'white',
-                    markerColor: 'black',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_5167d31e1e5b09dd97715549e3a4bc8c.setIcon(icon_8dbbff77a48f5b0f758086e0dbdb7f3b);
-            
-    
-            var popup_30fc36de20949f366f42183b3ae01a2d = L.popup({maxWidth: '300'});
+            var popup_7633c778368ebeb002216e2fcb1d12f2 = L.popup({maxWidth: '300'});
 
             
-                var html_b551c413b437df7957b22fbf9bc03d1f = $('<div id="html_b551c413b437df7957b22fbf9bc03d1f" style="width: 100.0%; height: 100.0%;">살인 사건 지역: 서울</div>')[0];
-                popup_30fc36de20949f366f42183b3ae01a2d.setContent(html_b551c413b437df7957b22fbf9bc03d1f);
+                var html_263fafec6a325f5d882cb96fc8ffc7d1 = $('<div id="html_263fafec6a325f5d882cb96fc8ffc7d1" style="width: 100.0%; height: 100.0%;">묻지마 사건 지역: 서울 사건 수: 15</div>')[0];
+                popup_7633c778368ebeb002216e2fcb1d12f2.setContent(html_263fafec6a325f5d882cb96fc8ffc7d1);
             
 
-            marker_5167d31e1e5b09dd97715549e3a4bc8c.bindPopup(popup_30fc36de20949f366f42183b3ae01a2d);
+            circle_marker_5f8a20da0b22573b9e14b89325f48a47.bindPopup(popup_7633c778368ebeb002216e2fcb1d12f2);
 
             
         
     
-
-            var marker_b318d413c5091d06d00d05d5128a4dab = L.marker(
+            var circle_marker_c9fd2997aa90582e403baea6178e30c4 = L.circleMarker(
                 [37.5666791,126.9782914],
                 {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .addTo(map_74273e58b831f9daeaee010b3ff73dfe);
+  "bubblingMouseEvents": true,
+  "color": "black",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "black",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 135,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(marker_cluster_9f20b23ad59c283c55860a92104856d4);
             
     
-
-                var icon_98957ef1ad335edb60fdf1fd528796cf = L.AwesomeMarkers.icon({
-                    icon: 'skull-crossbones',
-                    iconColor: 'white',
-                    markerColor: 'black',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_b318d413c5091d06d00d05d5128a4dab.setIcon(icon_98957ef1ad335edb60fdf1fd528796cf);
-            
-    
-            var popup_99f2c5972135532ae4c8371c4300db85 = L.popup({maxWidth: '300'});
+            var popup_9e0ee7bb2b0df483ed36c1eb480b60ce = L.popup({maxWidth: '300'});
 
             
-                var html_0f8410afc3deec4794f66754a5e6e1d8 = $('<div id="html_0f8410afc3deec4794f66754a5e6e1d8" style="width: 100.0%; height: 100.0%;">살인 사건 지역: 서울</div>')[0];
-                popup_99f2c5972135532ae4c8371c4300db85.setContent(html_0f8410afc3deec4794f66754a5e6e1d8);
+                var html_fa4bba264ce9ed045f1f0e06860babac = $('<div id="html_fa4bba264ce9ed045f1f0e06860babac" style="width: 100.0%; height: 100.0%;">살인 사건 지역: 서울 사건 수: 27</div>')[0];
+                popup_9e0ee7bb2b0df483ed36c1eb480b60ce.setContent(html_fa4bba264ce9ed045f1f0e06860babac);
             
 
-            marker_b318d413c5091d06d00d05d5128a4dab.bindPopup(popup_99f2c5972135532ae4c8371c4300db85);
+            circle_marker_c9fd2997aa90582e403baea6178e30c4.bindPopup(popup_9e0ee7bb2b0df483ed36c1eb480b60ce);
 
             
         
     
-
-            var marker_af9b4cdf6a86e69af853dbc17f560be7 = L.marker(
+            var circle_marker_4f5897415b36238ef0ae7030b6e1da28 = L.circleMarker(
                 [37.5666791,126.9782914],
                 {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .addTo(map_74273e58b831f9daeaee010b3ff73dfe);
+  "bubblingMouseEvents": true,
+  "color": "blue",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "blue",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 45,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(marker_cluster_9f20b23ad59c283c55860a92104856d4);
             
     
-
-                var icon_14dd530c8d5d31a1075665b91199f46a = L.AwesomeMarkers.icon({
-                    icon: 'skull-crossbones',
-                    iconColor: 'white',
-                    markerColor: 'black',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_af9b4cdf6a86e69af853dbc17f560be7.setIcon(icon_14dd530c8d5d31a1075665b91199f46a);
-            
-    
-            var popup_933e3f2ddce65d18152c637505f5b2ef = L.popup({maxWidth: '300'});
+            var popup_1d822dc98cd3369b8f80bf6adc66ef45 = L.popup({maxWidth: '300'});
 
             
-                var html_381cf74504d6e74192799146ae22ba1d = $('<div id="html_381cf74504d6e74192799146ae22ba1d" style="width: 100.0%; height: 100.0%;">살인 사건 지역: 서울</div>')[0];
-                popup_933e3f2ddce65d18152c637505f5b2ef.setContent(html_381cf74504d6e74192799146ae22ba1d);
+                var html_9502fa23cf85052c090fe9d21dd99176 = $('<div id="html_9502fa23cf85052c090fe9d21dd99176" style="width: 100.0%; height: 100.0%;">성폭행 사건 지역: 서울 사건 수: 9</div>')[0];
+                popup_1d822dc98cd3369b8f80bf6adc66ef45.setContent(html_9502fa23cf85052c090fe9d21dd99176);
             
 
-            marker_af9b4cdf6a86e69af853dbc17f560be7.bindPopup(popup_933e3f2ddce65d18152c637505f5b2ef);
+            circle_marker_4f5897415b36238ef0ae7030b6e1da28.bindPopup(popup_1d822dc98cd3369b8f80bf6adc66ef45);
 
             
         
     
-
-            var marker_39c8ba7ccc745dc1f477724b17a2fa83 = L.marker(
+            var circle_marker_a3b440135a4707405bb64f59e8d1502d = L.circleMarker(
                 [37.5666791,126.9782914],
                 {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .addTo(map_74273e58b831f9daeaee010b3ff73dfe);
+  "bubblingMouseEvents": true,
+  "color": "pink",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "pink",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 5,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(marker_cluster_9f20b23ad59c283c55860a92104856d4);
             
     
-
-                var icon_b984ddb080b63168852c61c0d96fcc34 = L.AwesomeMarkers.icon({
-                    icon: 'skull-crossbones',
-                    iconColor: 'white',
-                    markerColor: 'black',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_39c8ba7ccc745dc1f477724b17a2fa83.setIcon(icon_b984ddb080b63168852c61c0d96fcc34);
-            
-    
-            var popup_80ff3ed6e05413b803691981049939ca = L.popup({maxWidth: '300'});
+            var popup_de7c0c4ca3d0d7b169f5fe50e00e2dd7 = L.popup({maxWidth: '300'});
 
             
-                var html_08cdc93a5175a3e8d8a80d1a84c7c9a6 = $('<div id="html_08cdc93a5175a3e8d8a80d1a84c7c9a6" style="width: 100.0%; height: 100.0%;">살인 사건 지역: 서울</div>')[0];
-                popup_80ff3ed6e05413b803691981049939ca.setContent(html_08cdc93a5175a3e8d8a80d1a84c7c9a6);
+                var html_031f14ba7507893953d34eb44bb0e957 = $('<div id="html_031f14ba7507893953d34eb44bb0e957" style="width: 100.0%; height: 100.0%;">음주운전 사건 지역: 서울 사건 수: 1</div>')[0];
+                popup_de7c0c4ca3d0d7b169f5fe50e00e2dd7.setContent(html_031f14ba7507893953d34eb44bb0e957);
             
 
-            marker_39c8ba7ccc745dc1f477724b17a2fa83.bindPopup(popup_80ff3ed6e05413b803691981049939ca);
+            circle_marker_a3b440135a4707405bb64f59e8d1502d.bindPopup(popup_de7c0c4ca3d0d7b169f5fe50e00e2dd7);
 
             
         
     
-
-            var marker_be9c0941119ec890c9b6279a8eb86c88 = L.marker(
+            var circle_marker_eae6e2bb96a3f61fea6a1b5ef1aaaae8 = L.circleMarker(
                 [37.5666791,126.9782914],
                 {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .addTo(map_74273e58b831f9daeaee010b3ff73dfe);
+  "bubblingMouseEvents": true,
+  "color": "green",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "green",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 120,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(marker_cluster_9f20b23ad59c283c55860a92104856d4);
             
     
-
-                var icon_3d96cd89a9f04b5d831243dcf4bc5216 = L.AwesomeMarkers.icon({
-                    icon: 'skull-crossbones',
-                    iconColor: 'white',
-                    markerColor: 'black',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_be9c0941119ec890c9b6279a8eb86c88.setIcon(icon_3d96cd89a9f04b5d831243dcf4bc5216);
-            
-    
-            var popup_559fb069e36bd8099438774b7953fd45 = L.popup({maxWidth: '300'});
+            var popup_851bdfbe79f27581259aaeb69bb9be18 = L.popup({maxWidth: '300'});
 
             
-                var html_48bb66b89e412c053d4e61ba2a7e0287 = $('<div id="html_48bb66b89e412c053d4e61ba2a7e0287" style="width: 100.0%; height: 100.0%;">살인 사건 지역: 서울</div>')[0];
-                popup_559fb069e36bd8099438774b7953fd45.setContent(html_48bb66b89e412c053d4e61ba2a7e0287);
+                var html_ea9419c949fe5b1800d2a210506c44ad = $('<div id="html_ea9419c949fe5b1800d2a210506c44ad" style="width: 100.0%; height: 100.0%;">칼부림 사건 지역: 서울 사건 수: 24</div>')[0];
+                popup_851bdfbe79f27581259aaeb69bb9be18.setContent(html_ea9419c949fe5b1800d2a210506c44ad);
             
 
-            marker_be9c0941119ec890c9b6279a8eb86c88.bindPopup(popup_559fb069e36bd8099438774b7953fd45);
+            circle_marker_eae6e2bb96a3f61fea6a1b5ef1aaaae8.bindPopup(popup_851bdfbe79f27581259aaeb69bb9be18);
 
             
         
     
-
-            var marker_75653d44f605d6a1fc55883a29c8053e = L.marker(
+            var circle_marker_d9d5a0abe9a2ec7965c22bceee778171 = L.circleMarker(
                 [37.5666791,126.9782914],
                 {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .addTo(map_74273e58b831f9daeaee010b3ff73dfe);
+  "bubblingMouseEvents": true,
+  "color": "orange",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "orange",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 5,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(marker_cluster_9f20b23ad59c283c55860a92104856d4);
             
     
-
-                var icon_90a4ef6fe2fb980a7742e3572394d4ae = L.AwesomeMarkers.icon({
-                    icon: 'skull-crossbones',
-                    iconColor: 'white',
-                    markerColor: 'black',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_75653d44f605d6a1fc55883a29c8053e.setIcon(icon_90a4ef6fe2fb980a7742e3572394d4ae);
-            
-    
-            var popup_131f326ca5e58e6d831bc54fab7e7d91 = L.popup({maxWidth: '300'});
+            var popup_4078e4fe6c7f932d6dc369d2f4adb280 = L.popup({maxWidth: '300'});
 
             
-                var html_8ee4278baaa753f78d78ce2dbfd5ef20 = $('<div id="html_8ee4278baaa753f78d78ce2dbfd5ef20" style="width: 100.0%; height: 100.0%;">살인 사건 지역: 서울</div>')[0];
-                popup_131f326ca5e58e6d831bc54fab7e7d91.setContent(html_8ee4278baaa753f78d78ce2dbfd5ef20);
+                var html_e7ff06dcb2949511854d8e031e4beee8 = $('<div id="html_e7ff06dcb2949511854d8e031e4beee8" style="width: 100.0%; height: 100.0%;">폭행 사건 지역: 서울 사건 수: 1</div>')[0];
+                popup_4078e4fe6c7f932d6dc369d2f4adb280.setContent(html_e7ff06dcb2949511854d8e031e4beee8);
             
 
-            marker_75653d44f605d6a1fc55883a29c8053e.bindPopup(popup_131f326ca5e58e6d831bc54fab7e7d91);
+            circle_marker_d9d5a0abe9a2ec7965c22bceee778171.bindPopup(popup_4078e4fe6c7f932d6dc369d2f4adb280);
 
             
         
     
-
-            var marker_a149096e2a03d64bd497b3cb3b754231 = L.marker(
-                [37.5666791,126.9782914],
+            var circle_marker_e0e148468dc3c895b495ed706ca07093 = L.circleMarker(
+                [35.5391697,129.3119136],
                 {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .addTo(map_74273e58b831f9daeaee010b3ff73dfe);
+  "bubblingMouseEvents": true,
+  "color": "pink",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "pink",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 10,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(marker_cluster_9f20b23ad59c283c55860a92104856d4);
             
     
-
-                var icon_c9146f8369dc26d6d45804a22bb7413f = L.AwesomeMarkers.icon({
-                    icon: 'skull-crossbones',
-                    iconColor: 'white',
-                    markerColor: 'black',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_a149096e2a03d64bd497b3cb3b754231.setIcon(icon_c9146f8369dc26d6d45804a22bb7413f);
-            
-    
-            var popup_dc80287d6a0b23c3c8dcabe554199de1 = L.popup({maxWidth: '300'});
+            var popup_378c7972716795067f44be245b0afd05 = L.popup({maxWidth: '300'});
 
             
-                var html_56ebea7584c322c52f8e905e398540a6 = $('<div id="html_56ebea7584c322c52f8e905e398540a6" style="width: 100.0%; height: 100.0%;">살인 사건 지역: 서울</div>')[0];
-                popup_dc80287d6a0b23c3c8dcabe554199de1.setContent(html_56ebea7584c322c52f8e905e398540a6);
+                var html_94401991832b6f360d4d1413c4057fe8 = $('<div id="html_94401991832b6f360d4d1413c4057fe8" style="width: 100.0%; height: 100.0%;">음주운전 사건 지역: 울산 사건 수: 2</div>')[0];
+                popup_378c7972716795067f44be245b0afd05.setContent(html_94401991832b6f360d4d1413c4057fe8);
             
 
-            marker_a149096e2a03d64bd497b3cb3b754231.bindPopup(popup_dc80287d6a0b23c3c8dcabe554199de1);
+            circle_marker_e0e148468dc3c895b495ed706ca07093.bindPopup(popup_378c7972716795067f44be245b0afd05);
 
             
         
     
-
-            var marker_5b9ebdb64959edc212d318b9fe1b0db2 = L.marker(
-                [37.5666791,126.9782914],
+            var circle_marker_cdbc3fe549d6ad7d4d87e295c5853eff = L.circleMarker(
+                [37.456,126.7052],
                 {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .addTo(map_74273e58b831f9daeaee010b3ff73dfe);
+  "bubblingMouseEvents": true,
+  "color": "purple",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "purple",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 5,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(marker_cluster_9f20b23ad59c283c55860a92104856d4);
             
     
-
-                var icon_2e20c1e95987b4e6ca2da3cb0cbdeccd = L.AwesomeMarkers.icon({
-                    icon: 'skull-crossbones',
-                    iconColor: 'white',
-                    markerColor: 'black',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_5b9ebdb64959edc212d318b9fe1b0db2.setIcon(icon_2e20c1e95987b4e6ca2da3cb0cbdeccd);
-            
-    
-            var popup_32f372ce0fc8ba38a0feec14c4231872 = L.popup({maxWidth: '300'});
+            var popup_12c64a6e458cb985e69667f26a991fbb = L.popup({maxWidth: '300'});
 
             
-                var html_9025025a01af564bc3972e8c9269e527 = $('<div id="html_9025025a01af564bc3972e8c9269e527" style="width: 100.0%; height: 100.0%;">살인 사건 지역: 서울</div>')[0];
-                popup_32f372ce0fc8ba38a0feec14c4231872.setContent(html_9025025a01af564bc3972e8c9269e527);
+                var html_055496e5ac748d9a6d7076e9c614e3f5 = $('<div id="html_055496e5ac748d9a6d7076e9c614e3f5" style="width: 100.0%; height: 100.0%;">묻지마 사건 지역: 인천 사건 수: 1</div>')[0];
+                popup_12c64a6e458cb985e69667f26a991fbb.setContent(html_055496e5ac748d9a6d7076e9c614e3f5);
             
 
-            marker_5b9ebdb64959edc212d318b9fe1b0db2.bindPopup(popup_32f372ce0fc8ba38a0feec14c4231872);
+            circle_marker_cdbc3fe549d6ad7d4d87e295c5853eff.bindPopup(popup_12c64a6e458cb985e69667f26a991fbb);
 
             
         
     
-
-            var marker_02805089c9b1716e2611ed27cd51244f = L.marker(
-                [37.5666791,126.9782914],
+            var circle_marker_ed0d43c521982b314294fd67647459dd = L.circleMarker(
+                [37.456,126.7052],
                 {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .addTo(map_74273e58b831f9daeaee010b3ff73dfe);
+  "bubblingMouseEvents": true,
+  "color": "black",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "black",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 15,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(marker_cluster_9f20b23ad59c283c55860a92104856d4);
             
     
-
-                var icon_e75efab3bf2148d6e5387bc3cae0d201 = L.AwesomeMarkers.icon({
-                    icon: 'skull-crossbones',
-                    iconColor: 'white',
-                    markerColor: 'black',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_02805089c9b1716e2611ed27cd51244f.setIcon(icon_e75efab3bf2148d6e5387bc3cae0d201);
-            
-    
-            var popup_2ee3d2396e3d6b967e16ffb9a287bb64 = L.popup({maxWidth: '300'});
+            var popup_7429a6154b8e4445df23bd53fd180e74 = L.popup({maxWidth: '300'});
 
             
-                var html_773dcb67a0ff78effe5ea00864417a18 = $('<div id="html_773dcb67a0ff78effe5ea00864417a18" style="width: 100.0%; height: 100.0%;">살인 사건 지역: 서울</div>')[0];
-                popup_2ee3d2396e3d6b967e16ffb9a287bb64.setContent(html_773dcb67a0ff78effe5ea00864417a18);
+                var html_05dc41d9f1e9279ac1b0bf533410c27c = $('<div id="html_05dc41d9f1e9279ac1b0bf533410c27c" style="width: 100.0%; height: 100.0%;">살인 사건 지역: 인천 사건 수: 3</div>')[0];
+                popup_7429a6154b8e4445df23bd53fd180e74.setContent(html_05dc41d9f1e9279ac1b0bf533410c27c);
             
 
-            marker_02805089c9b1716e2611ed27cd51244f.bindPopup(popup_2ee3d2396e3d6b967e16ffb9a287bb64);
+            circle_marker_ed0d43c521982b314294fd67647459dd.bindPopup(popup_7429a6154b8e4445df23bd53fd180e74);
 
             
         
     
-
-            var marker_5d36b2af84be51119f85c01186dc489d = L.marker(
-                [37.5666791,126.9782914],
+            var circle_marker_1d42246703ae8db1f41bec44a1dcfc63 = L.circleMarker(
+                [37.456,126.7052],
                 {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .addTo(map_74273e58b831f9daeaee010b3ff73dfe);
+  "bubblingMouseEvents": true,
+  "color": "green",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "green",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 10,
+  "stroke": true,
+  "weight": 3
+}
+                ).addTo(marker_cluster_9f20b23ad59c283c55860a92104856d4);
             
     
-
-                var icon_14b27d51afe7791f5427d3fcb35ef011 = L.AwesomeMarkers.icon({
-                    icon: 'skull-crossbones',
-                    iconColor: 'white',
-                    markerColor: 'black',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_5d36b2af84be51119f85c01186dc489d.setIcon(icon_14b27d51afe7791f5427d3fcb35ef011);
-            
-    
-            var popup_425b63a6428748e1ef40d6493251624a = L.popup({maxWidth: '300'});
+            var popup_ea10840985c16da52af06f80e3aa0aef = L.popup({maxWidth: '300'});
 
             
-                var html_9b4170559ee74349ca8f8d81e521cb6e = $('<div id="html_9b4170559ee74349ca8f8d81e521cb6e" style="width: 100.0%; height: 100.0%;">살인 사건 지역: 서울</div>')[0];
-                popup_425b63a6428748e1ef40d6493251624a.setContent(html_9b4170559ee74349ca8f8d81e521cb6e);
+                var html_16614b9149dc7c5b3d92f5107d19472b = $('<div id="html_16614b9149dc7c5b3d92f5107d19472b" style="width: 100.0%; height: 100.0%;">칼부림 사건 지역: 인천 사건 수: 2</div>')[0];
+                popup_ea10840985c16da52af06f80e3aa0aef.setContent(html_16614b9149dc7c5b3d92f5107d19472b);
             
 
-            marker_5d36b2af84be51119f85c01186dc489d.bindPopup(popup_425b63a6428748e1ef40d6493251624a);
-
-            
-        
-    
-
-            var marker_9528c16ce52382ec580407cd466e881a = L.marker(
-                [37.5666791,126.9782914],
-                {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .addTo(map_74273e58b831f9daeaee010b3ff73dfe);
-            
-    
-
-                var icon_701ae81d4d2da4b75256a7da83812174 = L.AwesomeMarkers.icon({
-                    icon: 'skull-crossbones',
-                    iconColor: 'white',
-                    markerColor: 'black',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_9528c16ce52382ec580407cd466e881a.setIcon(icon_701ae81d4d2da4b75256a7da83812174);
-            
-    
-            var popup_1b6b17d06d820d0fcd3fd10b2060016c = L.popup({maxWidth: '300'});
-
-            
-                var html_d6dd0499796398e0025ff57333a9bb28 = $('<div id="html_d6dd0499796398e0025ff57333a9bb28" style="width: 100.0%; height: 100.0%;">살인 사건 지역: 서울</div>')[0];
-                popup_1b6b17d06d820d0fcd3fd10b2060016c.setContent(html_d6dd0499796398e0025ff57333a9bb28);
-            
-
-            marker_9528c16ce52382ec580407cd466e881a.bindPopup(popup_1b6b17d06d820d0fcd3fd10b2060016c);
-
-            
-        
-    
-
-            var marker_f43ae1fde2bc97ae07fbfc4e6ac9cab5 = L.marker(
-                [37.5666791,126.9782914],
-                {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .addTo(map_74273e58b831f9daeaee010b3ff73dfe);
-            
-    
-
-                var icon_7e057e3a589d5271a94b7b6d70f17307 = L.AwesomeMarkers.icon({
-                    icon: 'skull-crossbones',
-                    iconColor: 'white',
-                    markerColor: 'black',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_f43ae1fde2bc97ae07fbfc4e6ac9cab5.setIcon(icon_7e057e3a589d5271a94b7b6d70f17307);
-            
-    
-            var popup_f3db1c90de50f382996be87528716f50 = L.popup({maxWidth: '300'});
-
-            
-                var html_ee13af286c8aa4a114b2a34b78800a61 = $('<div id="html_ee13af286c8aa4a114b2a34b78800a61" style="width: 100.0%; height: 100.0%;">살인 사건 지역: 서울</div>')[0];
-                popup_f3db1c90de50f382996be87528716f50.setContent(html_ee13af286c8aa4a114b2a34b78800a61);
-            
-
-            marker_f43ae1fde2bc97ae07fbfc4e6ac9cab5.bindPopup(popup_f3db1c90de50f382996be87528716f50);
-
-            
-        
-    
-
-            var marker_aceb7cc1fb0b82570d8bc6d1d4e34000 = L.marker(
-                [37.5666791,126.9782914],
-                {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .addTo(map_74273e58b831f9daeaee010b3ff73dfe);
-            
-    
-
-                var icon_580f99e10a018d75905b265df4aff89f = L.AwesomeMarkers.icon({
-                    icon: 'skull-crossbones',
-                    iconColor: 'white',
-                    markerColor: 'black',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_aceb7cc1fb0b82570d8bc6d1d4e34000.setIcon(icon_580f99e10a018d75905b265df4aff89f);
-            
-    
-            var popup_72a0d4962422692cccc25007e1018ba7 = L.popup({maxWidth: '300'});
-
-            
-                var html_7aeb9f1e3813f495456e9f146cb2bd4a = $('<div id="html_7aeb9f1e3813f495456e9f146cb2bd4a" style="width: 100.0%; height: 100.0%;">살인 사건 지역: 서울</div>')[0];
-                popup_72a0d4962422692cccc25007e1018ba7.setContent(html_7aeb9f1e3813f495456e9f146cb2bd4a);
-            
-
-            marker_aceb7cc1fb0b82570d8bc6d1d4e34000.bindPopup(popup_72a0d4962422692cccc25007e1018ba7);
-
-            
-        
-    
-
-            var marker_f8672f198495bc87d73f3541e43b94cb = L.marker(
-                [37.5666791,126.9782914],
-                {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .addTo(map_74273e58b831f9daeaee010b3ff73dfe);
-            
-    
-
-                var icon_a22e537512ed09845b13e5f74fb540f9 = L.AwesomeMarkers.icon({
-                    icon: 'skull-crossbones',
-                    iconColor: 'white',
-                    markerColor: 'black',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_f8672f198495bc87d73f3541e43b94cb.setIcon(icon_a22e537512ed09845b13e5f74fb540f9);
-            
-    
-            var popup_6be30e89205a4bac05930e809d62a999 = L.popup({maxWidth: '300'});
-
-            
-                var html_a9289347c7c3a2d894c09179fb2e8c62 = $('<div id="html_a9289347c7c3a2d894c09179fb2e8c62" style="width: 100.0%; height: 100.0%;">살인 사건 지역: 서울</div>')[0];
-                popup_6be30e89205a4bac05930e809d62a999.setContent(html_a9289347c7c3a2d894c09179fb2e8c62);
-            
-
-            marker_f8672f198495bc87d73f3541e43b94cb.bindPopup(popup_6be30e89205a4bac05930e809d62a999);
-
-            
-        
-    
-
-            var marker_3927f825d8bef4e219c286f03c665630 = L.marker(
-                [37.5666791,126.9782914],
-                {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .addTo(map_74273e58b831f9daeaee010b3ff73dfe);
-            
-    
-
-                var icon_f5552be430c0baec78426cea710d9b8e = L.AwesomeMarkers.icon({
-                    icon: 'skull-crossbones',
-                    iconColor: 'white',
-                    markerColor: 'black',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_3927f825d8bef4e219c286f03c665630.setIcon(icon_f5552be430c0baec78426cea710d9b8e);
-            
-    
-            var popup_39326f66554ae78cdc3c978ab139d7a7 = L.popup({maxWidth: '300'});
-
-            
-                var html_e977c9216bb8b249474dc3516a837ef2 = $('<div id="html_e977c9216bb8b249474dc3516a837ef2" style="width: 100.0%; height: 100.0%;">살인 사건 지역: 서울</div>')[0];
-                popup_39326f66554ae78cdc3c978ab139d7a7.setContent(html_e977c9216bb8b249474dc3516a837ef2);
-            
-
-            marker_3927f825d8bef4e219c286f03c665630.bindPopup(popup_39326f66554ae78cdc3c978ab139d7a7);
-
-            
-        
-    
-
-            var marker_651cd405de8ace15fac172ffa5f5f33e = L.marker(
-                [37.5666791,126.9782914],
-                {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .addTo(map_74273e58b831f9daeaee010b3ff73dfe);
-            
-    
-
-                var icon_4700dcf746bb2c957794cfc707b43042 = L.AwesomeMarkers.icon({
-                    icon: 'skull-crossbones',
-                    iconColor: 'white',
-                    markerColor: 'black',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_651cd405de8ace15fac172ffa5f5f33e.setIcon(icon_4700dcf746bb2c957794cfc707b43042);
-            
-    
-            var popup_925f2c968d47400028c5b0a72be69fa0 = L.popup({maxWidth: '300'});
-
-            
-                var html_3edb09bf11cdb51438178d88e987acb8 = $('<div id="html_3edb09bf11cdb51438178d88e987acb8" style="width: 100.0%; height: 100.0%;">살인 사건 지역: 서울</div>')[0];
-                popup_925f2c968d47400028c5b0a72be69fa0.setContent(html_3edb09bf11cdb51438178d88e987acb8);
-            
-
-            marker_651cd405de8ace15fac172ffa5f5f33e.bindPopup(popup_925f2c968d47400028c5b0a72be69fa0);
-
-            
-        
-    
-
-            var marker_476ef04abd5743e2c85455e104798e30 = L.marker(
-                [37.5666791,126.9782914],
-                {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .addTo(map_74273e58b831f9daeaee010b3ff73dfe);
-            
-    
-
-                var icon_0a2d034633fce8dd2e58795a408abba0 = L.AwesomeMarkers.icon({
-                    icon: 'exclamation',
-                    iconColor: 'white',
-                    markerColor: 'blue',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_476ef04abd5743e2c85455e104798e30.setIcon(icon_0a2d034633fce8dd2e58795a408abba0);
-            
-    
-            var popup_474d358057036ad5d2cba262f4efdba2 = L.popup({maxWidth: '300'});
-
-            
-                var html_d163712f924f1db743587ee3cce3a2a7 = $('<div id="html_d163712f924f1db743587ee3cce3a2a7" style="width: 100.0%; height: 100.0%;">성폭행 사건 지역: 서울</div>')[0];
-                popup_474d358057036ad5d2cba262f4efdba2.setContent(html_d163712f924f1db743587ee3cce3a2a7);
-            
-
-            marker_476ef04abd5743e2c85455e104798e30.bindPopup(popup_474d358057036ad5d2cba262f4efdba2);
-
-            
-        
-    
-
-            var marker_da37c3ebe9a40073697ff43011e02f51 = L.marker(
-                [37.5666791,126.9782914],
-                {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .addTo(map_74273e58b831f9daeaee010b3ff73dfe);
-            
-    
-
-                var icon_ef02aeeeb70c75af4fddc94ee9a77f7f = L.AwesomeMarkers.icon({
-                    icon: 'exclamation',
-                    iconColor: 'white',
-                    markerColor: 'blue',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_da37c3ebe9a40073697ff43011e02f51.setIcon(icon_ef02aeeeb70c75af4fddc94ee9a77f7f);
-            
-    
-            var popup_b50f43f8864a2b1390fb04ad2944650b = L.popup({maxWidth: '300'});
-
-            
-                var html_95db60cbeb6e4b995ec83eb98b182e96 = $('<div id="html_95db60cbeb6e4b995ec83eb98b182e96" style="width: 100.0%; height: 100.0%;">성폭행 사건 지역: 서울</div>')[0];
-                popup_b50f43f8864a2b1390fb04ad2944650b.setContent(html_95db60cbeb6e4b995ec83eb98b182e96);
-            
-
-            marker_da37c3ebe9a40073697ff43011e02f51.bindPopup(popup_b50f43f8864a2b1390fb04ad2944650b);
-
-            
-        
-    
-
-            var marker_9dd37877762d4b65df5c264ac9818d22 = L.marker(
-                [37.5666791,126.9782914],
-                {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .addTo(map_74273e58b831f9daeaee010b3ff73dfe);
-            
-    
-
-                var icon_3eec03e3ece7abf0bc5c0830228e286b = L.AwesomeMarkers.icon({
-                    icon: 'exclamation',
-                    iconColor: 'white',
-                    markerColor: 'blue',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_9dd37877762d4b65df5c264ac9818d22.setIcon(icon_3eec03e3ece7abf0bc5c0830228e286b);
-            
-    
-            var popup_caeebf9626f8d86367c38cc4c0cac9b1 = L.popup({maxWidth: '300'});
-
-            
-                var html_20a65fed12601d14613b2071cda2f271 = $('<div id="html_20a65fed12601d14613b2071cda2f271" style="width: 100.0%; height: 100.0%;">성폭행 사건 지역: 서울</div>')[0];
-                popup_caeebf9626f8d86367c38cc4c0cac9b1.setContent(html_20a65fed12601d14613b2071cda2f271);
-            
-
-            marker_9dd37877762d4b65df5c264ac9818d22.bindPopup(popup_caeebf9626f8d86367c38cc4c0cac9b1);
-
-            
-        
-    
-
-            var marker_eaf4e408e19a29205b7e66bf0317cb94 = L.marker(
-                [37.5666791,126.9782914],
-                {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .addTo(map_74273e58b831f9daeaee010b3ff73dfe);
-            
-    
-
-                var icon_e060e3cb619af5de986dc857bae73035 = L.AwesomeMarkers.icon({
-                    icon: 'exclamation',
-                    iconColor: 'white',
-                    markerColor: 'blue',
-                    prefix: 'glyphicon',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_eaf4e408e19a29205b7e66bf0317cb94.setIcon(icon_e060e3cb619af5de986dc857bae73035);
-            
-    
-            var popup_d7a0fd4d2ab897df47f01cc1c6cfe9a4 = L.popup({maxWidth: '300'});
-
-            
-                var html_53c54e9e0bf6c40a10417e5405c568f3 = $('<div id="html_53c54e9e0bf6c40a10417e5405c568f3" style="width: 100.0%; height: 100.0%;">성폭행 사건 지역: 서울</div>')[0];
-                popup_d7a0fd4d2ab897df47f01cc1c6cfe9a4.setContent(html_53c54e9e0bf6c40a10417e5405c568f3);
-            
-
-            marker_eaf4e408e19a29205b7e66bf0317cb94.bindPopup(popup_d7a0fd4d2ab897df47f01cc1c6cfe9a4);
+            circle_marker_1d42246703ae8db1f41bec44a1dcfc63.bindPopup(popup_ea10840985c16da52af06f80e3aa0aef);
 
             
         
