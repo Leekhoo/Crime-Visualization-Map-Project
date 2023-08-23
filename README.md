@@ -1,5 +1,5 @@
 ## 프로젝트 이름 및 설명:
-"Crime Visualization Map using Python and Folium"
+"흉악 범죄 지도 시각화 프로젝트"
 
 ## 프로젝트 소개:
 "이 프로젝트는 뉴스 데이터를 활용하여 범죄 발생 지역을 지도에 시각화하는 것을 목표로 합니다."
